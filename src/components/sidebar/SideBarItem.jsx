@@ -11,8 +11,8 @@ function SideBarItem({ to, text, source, icon }) {
       to={to}
     >
       <div className="flex items-center">
-        {icon && <span className="mr-2">{icon}</span>}
-        <span>{text}</span>
+        {icon && <span className="mr-2 text-lg">{icon}</span>}
+        <span className="text-lg">{text}</span>
       </div>
     </NavLink>
   );
