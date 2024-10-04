@@ -1,6 +1,4 @@
-import cn from "classnames";
-
-import LogoCollapse from "../ui/LogoCollapse";
+import Logo from "../ui/Logo";
 import { useLocation } from "react-router-dom";
 
 function Header() {
@@ -23,13 +21,8 @@ function Header() {
       <div className="flex items-center px-5 md:px-8">
         <div className="relative flex w-full flex-1 items-center">
           <div className="flex items-center">
-            <div
-              className={cn(
-                "flex h-16 shrink-0 transition-[width] duration-300 me-4 lg:h-[76px] lg:border-solid lg:border-gray-200/80 lg:me-8 lg:border-e lg:w-[257px]"
-              )}
-            >
-              <LogoCollapse />
-              {/* <Logo /> */}
+            <div className="flex h-16 shrink-0 transition-[width] duration-300 me-4 lg:h-[76px] lg:border-solid lg:border-gray-200/80 lg:me-8 lg:border-e lg:w-[257px]">
+              <Logo />
             </div>
           </div>
           <div className="text-3xl font-bold">{renderText()}</div>

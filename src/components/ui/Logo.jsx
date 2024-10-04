@@ -1,7 +1,7 @@
 function Logo() {
   return (
-    <div className="text-2xl font-extrabold text-green-600 flex items-center justify-center relative overflow-hidden">
-      LÊ NGUYÊN KHÁNH
+    <div className="text-xl font-extrabold text-blue-600 flex items-center justify-center relative overflow-hidden cursor">
+      ADMIN
     </div>
   );
 }

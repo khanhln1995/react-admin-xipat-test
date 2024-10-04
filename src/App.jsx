@@ -1,9 +1,11 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./layout/Root";
-import DashboardPage from "./pages/Dashboard";
-import ProductPage from "./pages/Product";
-import SettingPage from "./pages/Setting";
-import NotFoundPage from "./pages/NotFoundPage";
+import { lazy, Suspense } from "react";
+
+const DashboardPage = lazy(() => import("./pages/Dashboard"));
+const ProductPage = lazy(() => import("./pages/Product"));
+const SettingPage = lazy(() => import("./pages/Setting"));
+const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 
 function App() {
   const router = createBrowserRouter([
@@ -31,7 +33,12 @@ function App() {
       ],
     },
   ]);
-  return <RouterProvider router={router} />;
+
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <RouterProvider router={router} />
+    </Suspense>
+  );
 }
 
 export default App;
