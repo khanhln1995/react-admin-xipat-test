@@ -148,18 +148,18 @@ function ProductTable() {
   return (
     <>
       <IndexFilters
-        sortOptions={[]} // You can add sort options as needed
-        sortSelected={sortSelected}
-        queryValue={queryValue}
-        queryPlaceholder="Searching in all"
-        onQueryChange={handleFiltersQueryChange}
-        onQueryClear={handleQueryValueRemove}
-        onSort={setSortSelected}
+        // sortOptions={[]} // You can add sort options as needed
+        // sortSelected={sortSelected}
+        // queryValue={queryValue}
+        // queryPlaceholder="Searching in all"
+        // onQueryChange={handleFiltersQueryChange}
+        // onQueryClear={handleQueryValueRemove}
+        // onSort={setSortSelected}
         tabs={tabs}
         selected={selected}
         onSelect={setSelected}
-        appliedFilters={appliedFilters}
-        mode={mode}
+        // appliedFilters={appliedFilters}
+        mode="DEFAULT"
         setMode={setMode}
       />
       <IndexTable
