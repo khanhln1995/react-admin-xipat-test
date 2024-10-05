@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: my-react-app # Your app's name
+    env: static
+    staticPublishPath: build # Points to the build directory
+    routes:
+      - type: rewrite
+        source: "/*"
+        destination: /index.html
